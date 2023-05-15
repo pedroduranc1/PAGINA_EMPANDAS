@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREDDYS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- NAVEGACION PAGINA -->
+    <header>
+        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="/" class="flex items-center">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <a href="/"
+                        class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Home</a>
+                    <a href="/clientes.html"
+                        class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Registrar Clientes</a>
+                    <a href="#"
+                        class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Ventas</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="grid place-content-center">
+        <h1 class="mt-5 text-xl">REGISTRO DE NUEVO CLIENTE</h1>
+
+    </div>
+    <!-- FORMULARIO DE REGISTRO DE CLIENTE -->
+    <div class="grid place-content-center mt-5 w-full h-full">
+        <form id="form" class="w-full max-w-lg bg-gray-800 px-8 pt-4 pb-4 rounded-md">
+            <div class="flex hidden flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <input disabled
+                        class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        name="id" id="id" type="number">
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+                        for="grid-first-name">
+                        Nombre
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="nombre" type="text" placeholder="Jane" name="Nombre">
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-last-name">
+                        Apellido
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="apellido" name="Apellido" type="text" placeholder="Doe">
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-password">
+                        Correo
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        name="Correo" id="correo" type="email" placeholder="jhondoe@gmail.com">
+                    <p class="text-white text-xs italic">jhondoe@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="flex place-content-center gap-4 flex-row">
+                <button type="submit" id="btn-reg"
+                    class="bg-white transition-all hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                    Registrar Cliente
+                </button>
+                <button
+                    type="submit" id="btn-act"
+                    class="bg-white hidden transition-all hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                    Actualizar Cliente
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- LOS CLIENTES REGISTRADOS -->
+    <div class="grid place-content-center w-[100%]">
+        <h1 class="text-gray-800 font-bold text-xl my-5 text-center">CLIENTES</h1>
+        <!-- AQUI SE MUESTRAN LOS USUARIOS -->
+        <div class="mt-2 grid grid-cols-3 gap-3 mb-4 w-full overflow-auto" id="clientesList">
+            
+        </div>
+    </div>
+
+    <script src="/js/freddy.js"></script>
+</body>
+</html>
